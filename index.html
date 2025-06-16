@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!-- 
+        Awesome Template
+        http://www.templatemo.com/preview/templatemo_450_awesome
+        -->
+		<title>PHÚC NGUYÊN</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/animate.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/templatemo-style.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.singlePageNav.min.js"></script>
+		<script src="js/typed.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/custom.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+		<style>/* Trang trí cho logo PHÚC NGUYÊN */
+		.navbar-brand {
+  		font-family: 'Oswald', sans-serif; /* Sử dụng font Oswald vừa thêm */
+  		font-size: 32px; /* Tăng cỡ chữ cho nổi bật */
+  		font-weight: 700; /* Chọn độ đậm (bold) */
+  		color: #ea0404 !important; /* Đổi màu chữ thành trắng. !important để ưu tiên hơn CSS của Bootstrap */
+  		text-transform: uppercase; /* Luôn luôn viết hoa */
+  		letter-spacing: 2px; /* Tăng khoảng cách giữa các ký tự cho thoáng hơn */
+  		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Thêm bóng mờ để chữ có chiều sâu */
+  		transition: all 0.3s ease; /* Thêm hiệu ứng chuyển động mượt mà */
+		}
+
+		/* Thêm hiệu ứng khi rê chuột vào logo */
+		.navbar-brand:hover {
+  			color: #15eb0e !important; /* Hơi đổi màu khi rê chuột vào */
+  		transform: scale(1.05); /* Phóng to nhẹ khi rê chuột */
+		}</style>
+		
+		<style>
+    /* Styling cho phần #home */
+    #home {
+        position: relative;
+        color: #fff; /* Chữ màu trắng mặc định cho các phần khác */
+        text-align: center;
+        padding: 100px 0;
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+/* CSS cho video nếu cần */
+        .video-container {
+            width: 80%; /* Chiều rộng của khung chứa video */
+            max-width: 900px; /* Chiều rộng tối đa */
+            margin: 50px auto; /* Căn giữa và tạo khoảng cách */
+            background-color: #f0f0f0; /* Màu nền cho container */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .video-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .my-video {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    /* Ảnh nền thực sự (sẽ được làm mờ) */
+    #home::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('gioithieu.jpg') no-repeat center center fixed; /* THAY THẾ BẰNG ĐƯỜNG DẪN ẢNH CỦA BẠN */
+        background-size: cover;
+        filter: blur(8px); /* Hiệu ứng mờ */
+        -webkit-filter: blur(8px);
+        z-index: -1;
+        transform: scale(1.05);
+    }
+    /* Lớp phủ màu đen trong suốt để tăng độ tương phản cho chữ */
+    #home::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Màu đen trong suốt */
+        z-index: -1;
+    }
+
+    /* Đảm bảo nội dung (chữ, nút) nằm trên lớp phủ và ảnh nền */
+    #home .container {
+        position: relative;
+        z-index: 1;
+    }
+    /* Styling cho tiêu đề chính */
+    .home-title {
+        font-family: 'Arial Black', sans-serif;
+        font-size: 3.5em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Styling cho phần "CỨU HỘ GIAO THÔNG" */
+    .home-title .main-text {
+        display: block;
+        font-weight: 900;
+        color: #FF0000; /* ĐÃ ĐỔI MÀU THÀNH ĐỎ (#FF0000) */
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+   
+    /* Điều chỉnh cho màn hình nhỏ hơn */
+    @media (max-width: 768px) {
+        .home-title {
+            font-size: 2.5em;
+        }
+        .home-title .main-text {
+            margin-bottom: 5px;
+        }
+        #home::before {
+             filter: blur(5px);
+             -webkit-filter: blur(5px);
+        }
+    }
+    
+</style>
+
+	</head>
+	<body id="top">
+		<!-- start preloader -->
+		<div class="preloader">
+			<div class="sk-spinner sk-spinner-wave">
+     	 		<div class="sk-rect1"></div>
+       			<div class="sk-rect2"></div>
+       			<div class="sk-rect3"></div>
+      	 		<div class="sk-rect4"></div>
+      			<div class="sk-rect5"></div>
+     		</div>
+    	</div>
+    	<!-- end preloader -->
+
+    	<!-- start navigation -->
+		<nav class="navbar navbar-default templatemo-nav" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+            </button>
+            <a data-scroll href="#about"  class="navbar-brand" href="#">PHÚC NGUYÊN</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#top">TRANG CHỦ</a></li>
+                <li><a href="#about">GIỚI THIỆU</a></li>
+                <li><a href="#new">TIN TỨC</a></li>
+                <li><a href="#services">DỊCH VỤ</a></li>
+                <li><a href="#image">HÌNH ẢNH</a></li>
+                <li><a href="#lienhe">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+		<!-- end navigation -->
+    	<!-- start home -->
+<section id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <h1 class="wow fadeIn home-title" data-wow-offset="100" data-wow-delay="0.9s">
+                    <span class="main-text">CỨU HỘ GIAO THÔNG VĨNH LONG 24/7</span>
+                </h1>
+                <div class="element">
+                    <div class="sub-element">Điện thoại:  0918.170.333 - 098.901. 5151- 0939.016.464 - 0327.697.535 Giới thiệu Trung Tâm Cứu hộ giao thông của  CÔNG TY TNHH MTV VẬN TẢI NGUYÊN PHÚC</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    	<!-- end home -->
+    	<!-- start about -->
+<section id="about" style="position: relative; padding: 60px 0; color: rgb(15, 14, 14); overflow: hidden;">
+
+  <!-- Lớp nền hình ảnh -->
+  <div style="
+    background: url('images/about.jpg') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0.3;
+    z-index: 1;">
+  </div>
+
+  <!-- Nội dung nằm trên nền -->
+  <div class="container" style="position: relative; z-index: 2;">
+    <h2 class="wow fadeInDown" data-wow-offset="50" data-wow-delay="0.3s"><span>GIỚI THIỆU</span></h2>
+    <h1 class="wow fadeInUp" data-wow-delay="0.5s"><span>GIỚI THIỆU TRUNG TÂM CỨU HỘ GIAO THÔNG VĨNH LONG 24H</span></h1>
+
+    <p class="wow fadeIn" data-wow-delay="0.6s"><strong>CÔNG TY TNHH MTV VẬN TẢI NGUYÊN PHÚC</strong> – Đồng hành cùng bạn trên mọi nẻo đường!</p>
+
+    <p class="wow fadeIn" data-wow-delay="0.7s">Khi xe của bạn bất ngờ gặp sự cố giữa đường, chậm trễ một phút có thể là rủi ro lớn... bất kể ngày đêm.</p>
+
+    <p class="wow fadeIn" data-wow-delay="0.8s">Với đội ngũ kỹ thuật viên lành nghề... đảm bảo an toàn cho bạn và phương tiện trong mọi tình huống:</p>
+
+    <ul class="wow fadeInLeft" data-wow-delay="0.9s">
+      <li>Xe hư hỏng đột ngột</li>
+      <li>Tai nạn giao thông</li>
+      <li>Thiên tai – ngập nước – kẹt đường</li>
+      <li>Trên mọi địa hình: cao tốc, quốc lộ, nội đô, hay vùng sâu vùng xa</li>
+    </ul>
+
+    <p class="hotline wow fadeInUp" data-wow-delay="1.0s">📞 Đừng lo lắng – chỉ cần gọi:</p>
+    <p class="hotline wow fadeInUp" data-wow-delay="1.1s">
+      0918.170.333 – 098.901.5151<br>
+      0327.697.535 – 0939.016.464
+    </p>
+
+    <p class="footer wow fadeInUp" data-wow-delay="1.2s">
+      Chúng tôi không chỉ cứu hộ xe – mà còn cứu hộ sự an tâm của bạn trên hành trình.<br>
+      <strong>Giá cả hợp lý – Phục vụ tận tâm – Có mặt ngay khi bạn cần!</strong>
+    </p>
+  </div>
+</section>
+
+  <section id="about" style="background: url('images/taisaolaichonchungtoi.jpg') no-repeat center center">
+    
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-md-12">
+        <h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
+          <span>TẠI SAO LẠI CHỌN CHÚNG TÔI</span>
+        </h2>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Item -->
+      <div class="col-md-4 col-sm-6 mb-4" >
+        <div class="card h-100 bg-dark text-white shadow rounded p-4">
+          <div class="d-flex align-items-start">
+            <img src="images/uytin.png" alt="Uy tin" style="width: 60px; height: 60px; margin-bottom: 10px; ">
+            <h5 class="fw-bold">"100% UY TÍN - 0% THẤT VỌNG"</h5>
+          </div>
+          <p class="mt-3">Chúng tôi cam kết mang đến cho khách hàng dịch vụ uy tín tuyệt đối – 100% minh bạch, chuyên nghiệp và tận tâm.</p>
+        </div>
+      </div>
+      <!-- Item -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 bg-dark text-white shadow rounded p-4">
+          <div class="d-flex align-items-start">
+            <img src="images/thanthien.png" alt="Thân thiện" style="width: 60px; height: 60px; margin-bottom: 10px; ">
+            <h5 class="fw-bold">"ĐỘI NGŨ THÂN THIỆN"</h5>
+          </div>
+          <p class="mt-3">Chúng tôi tự hào sở hữu đội ngũ nhân viên thân thiện, nhiệt tình và giàu kinh nghiệm, luôn sẵn sàng lắng nghe và hỗ trợ khách hàng bằng sự chân thành và thái độ tích cực.</p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 bg-dark text-white shadow rounded p-4">
+          <div class="d-flex align-items-start">
+            <img src="images/chuyenghiep.png" alt="Chuyên nghiệp" style="width: 60px; height: 60px; margin-bottom: 10px; ">
+            <h5 class="fw-bold">CHUYÊN NGHIỆP TỪ KHÂU NHỎ NHẤT</h5>
+          </div>
+          <p class="mt-3">Mỗi khâu phục vụ đều được kiểm soát chất lượng chặt chẽ – từ tiếp nhận yêu cầu đến xử lý và hậu mãi – đảm bảo khách hàng nhận được giải pháp tối ưu, nhanh chóng, hiệu quả và đáng tin cậy.</p>
+        </div>
+      </div>
+      <!-- Item -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 bg-dark text-white shadow rounded p-4">
+          <div class="d-flex align-items-start">
+            <img src="images/giachat.png" alt="Giá tốt" style="width: 60px; height: 60px; margin-bottom: 10px; ">
+            <h5 class="fw-bold">GIÁ CHẤT - DỊCH VỤ CHẤT</h5>
+          </div>
+          <p class="mt-3">Mọi chi phí đều được công khai, rõ ràng – không phụ phí ẩn, không phát sinh bất ngờ. Cam kết giúp khách hàng tiết kiệm chi phí nhưng vẫn nhận được giá trị cao nhất.</p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 bg-dark text-white shadow rounded p-4">
+          <div class="d-flex align-items-start">
+            <img src="images/nhanhchong.png" alt="Nhanh chóng" style="width: 60px; height: 60px; margin-bottom: 10px; ">
+            <h5 class="fw-bold">NHANH CHÓNG KỊP THỜI</h5>
+          </div>
+          <p class="mt-3">Chúng tôi hiểu rằng thời gian là yếu tố quan trọng, đặc biệt trong những tình huống khẩn cấp. Vì thế, dịch vụ của chúng tôi luôn được tối ưu để phản hồi nhanh, xử lý gọn, có mặt đúng lúc</p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card h-100 bg-dark text-white shadow rounded p-4">
+          <div class="d-flex align-items-start">
+            <img src="images/24h.png" alt="24/24" style="width: 60px; height: 60px; margin-bottom: 10px; ">
+            <h5 class="fw-bold">TIẾP NHẬN 24/24</h5>
+          </div>
+          <p class="mt-3">Chúng tôi cung cấp dịch vụ tiếp nhận yêu cầu 24/24, kể cả ngày lễ, cuối tuần hay đêm khuya. Dù bạn gặp sự cố vào bất kỳ thời điểm nào, chúng tôi luôn trực tổng đài và sẵn sàng hỗ trợ ngay lập tức.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end about -->
+<section id="new" style="background-color: #f8f9fa; padding: 60px 0;">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>TIN TỨC</span></h2>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
+    					<div class="team-wrapper">
+    						<img src="images/member-1.jpg" class="img-responsive" alt="team img 1">
+    							<div class="team-des">
+    								<h4>CỨU HỘ XE MÁY</h4>
+    								<span>Hỗ Trợ Nhanh Chóng, An Tâm Mọi Hành Trình</span>
+    								<p>Dịch vụ Cứu hộ xe máy chuyên nghiệp, nhanh chóng, phục vụ 24/7 – sẵn sàng hỗ trợ khi xe bạn gặp sự cố giữa đường như: hết xăng, thủng lốp, chết máy, mất chìa khóa hay tai nạn nhẹ. Đội ngũ kỹ thuật viên tận tâm, có mặt nhanh trong vòng 15–30 phút tùy khu vực. Cam kết giá cả minh bạch, phục vụ tận nơi, đảm bảo bạn tiếp tục hành trình một cách an toàn và thuận lợi.</p>
+    							</div>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.6s">
+    					<div class="team-wrapper">
+    						<img src="images/member-2.jpg" class="img-responsive" alt="team img 2">
+    							<div class="team-des">
+    								<h4>CỨU HỘ Ô TÔ</h4>
+    								<span>Nhanh Chóng, Uy Tín, 24/7</span>
+    								<p>Dịch vụ Cứu hộ ô tô chuyên nghiệp, phục vụ 24/7, hỗ trợ kịp thời khi xe bạn gặp sự cố như: hỏng máy, hết ắc quy, tai nạn, thủng lốp, mất khóa, ngập nước… Đội ngũ kỹ thuật viên lành nghề, xe chuyên dụng hiện đại, cam kết có mặt nhanh trong thời gian ngắn. Chúng tôi phục vụ khắp các tuyến đường nội thành, ngoại ô, cao tốc – giúp bạn yên tâm trên mọi cung đường.</p>
+    							</div>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
+    					<div class="team-wrapper">
+    						<img src="images/member-3.jpg" class="img-responsive" alt="team img 3">
+    							<div class="team-des">
+    								<h4>CỨU HỘ TÀU</h4>
+    								<span>Ứng Cứu Kịp Thời, An Toàn Trên Sông Nước</span>
+    								<p>Dịch vụ Cứu hộ tàu thủy chuyên nghiệp, sẵn sàng 24/7 để hỗ trợ các sự cố trên sông, hồ, biển như: tàu chết máy, trôi neo, mắc cạn, thủng vỏ, va chạm, ngập nước hoặc lật úp. Chúng tôi sở hữu đội tàu cứu hộ hiện đại, thiết bị chuyên dụng, thợ lặn và đội ngũ kỹ thuật có kinh nghiệm xử lý khẩn cấp trong mọi điều kiện thời tiết, địa hình phức tạp.</p>
+    							</div>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.6s">
+    					<div class="team-wrapper">
+    						<img src="images/member-4.jpg" class="img-responsive" alt="team img 4">
+    							<div class="team-des">
+    								<h4>DỊCH VỤ KHÁC</h4>
+    								<span>Linh Hoạt, Đa Dạng, Theo Yêu Cầu</span>
+    								<p>Chúng tôi cung cấp dịch vụ vận chuyển đặc biệt, đáp ứng các loại hình vận chuyển không phổ biến hoặc yêu cầu kỹ thuật riêng biệt. Bao gồm: Vận chuyển máy móc công trình. Vận chuyển thiết bị y tế, điện tử, vật tư chuyên dụng. Vận chuyển hàng dễ vỡ, hàng lạnh, hóa chất. Hỗ trợ nâng hạ, bốc xếp, đóng gói, khai báo hải quan (nếu cần)</p>
+    							</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- end team -->
+
+    	<!-- start service -->
+    	<section id="services"style="background-color: #222; padding: 40px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s"><span> DỊCH VỤ </span></h2>
+            </div>
+
+            <!-- Dịch vụ Cứu hộ -->
+            <div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.4s">
+                <div class="service-item text-center">
+                    <img src="images/cuuho.png" alt="Cứu hộ" class="img-fluid mb-3" style="max-height: 200px; object-fit: cover; border-radius: 8px;">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-pickup fa-2x"></i>
+                    </div>
+                    <h3>CỨU HỘ</h3>
+                    <p>Chúng tôi cung cấp dịch vụ cứu hộ xe 24/7, luôn sẵn sàng hỗ trợ bạn trong mọi tình huống khẩn cấp, từ tai nạn đến hỏng hóc giữa đường. Đội ngũ chuyên nghiệp, trang thiết bị hiện đại đảm bảo kéo xe an toàn, nhanh chóng.</p>
+                </div>
+            </div>
+
+            <!-- Dịch vụ Bảo dưỡng -->
+            <div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+                <div class="service-item text-center">
+                    <img src="images/baoduong.png" alt="Bảo dưỡng" class="img-fluid mb-3" style="max-height: 200px; object-fit: cover; border-radius: 8px;">
+                    <div class="service-icon">
+                        <i class="fas fa-tools fa-2x"></i>
+                    </div>
+                    <h3>BẢO DƯỠNG</h3>
+                    <p>Bảo dưỡng định kỳ giúp xe của bạn hoạt động ổn định và kéo dài tuổi thọ. Chúng tôi cung cấp các gói bảo dưỡng toàn diện từ kiểm tra động cơ, hệ thống phanh đến thay thế phụ tùng chính hãng.</p>
+                </div>
+            </div>
+
+            <!-- Dịch vụ Thay nhớt -->
+            <div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.8s">
+                <div class="service-item text-center">
+                    <img src="images/thaynhot.png" alt="Thay nhớt" class="img-fluid mb-3" style="max-height: 200px; object-fit: cover; border-radius: 8px;">
+                    <div class="service-icon">
+                        <i class="fas fa-oil-can fa-2x"></i>
+                    </div>
+                    <h3>THAY NHỚT</h3>
+                    <p>Dịch vụ thay nhớt nhanh chóng, tiện lợi với nhiều loại dầu nhớt chất lượng cao, phù hợp với mọi dòng xe. Đảm bảo xe của bạn luôn được bôi trơn tối ưu, vận hành êm ái và tiết kiệm nhiên liệu.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    	<!-- end servie -->
+    	<!-- start portfolio -->
+    	<section id="image" style="background-color: #222; padding: 40px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s" style="color: #00bfff;">
+                    <span>HÌNH ẢNH</span>
+                </h2>
+            </div>
+
+            <!-- Ảnh 1 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                    <img src="images/1.png" class="img-responsive img-thumbnail" alt="portfolio img 1">
+                </div>
+            </div>
+            <!-- Ảnh 2 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                    <img src="images/2.png" class="img-responsive img-thumbnail" alt="portfolio img 2">
+                </div>
+            </div>
+            <!-- Ảnh 3 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                    <img src="images/3.png" class="img-responsive img-thumbnail" alt="portfolio img 3">
+                </div>
+            </div>
+
+            <!-- Ảnh 4 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                    <img src="images/4.png" class="img-responsive img-thumbnail" alt="portfolio img 4">
+                </div>
+            </div>
+
+            <!-- Ảnh 5 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                    <img src="images/5.png" class="img-responsive img-thumbnail" alt="portfolio img 5">
+                </div>
+            </div>
+
+            <!-- Ảnh 6 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                    <img src="images/6.png" class="img-responsive img-thumbnail" alt="portfolio img 6">
+                </div>
+            </div>
+<!-- Ảnh 7 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                </div>
+            </div>
+            <!-- Ảnh 7 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                    <img src="images/7.png" class="img-responsive img-thumbnail" alt="portfolio img 7">
+                </div>
+            </div>
+
+            <!-- Ảnh 8 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                    <img src="images/8.png" class="img-responsive img-thumbnail" alt="portfolio img 8">
+                </div>
+            </div>
+             <!-- Ảnh 9 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                    <img src="images/9.png" class="img-responsive img-thumbnail" alt="portfolio img 9">
+                </div>
+            </div>
+            <!-- Ảnh 7 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                </div>
+            </div>
+             <!-- Ảnh 10 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                    <img src="images/10.png" class="img-responsive img-thumbnail" alt="portfolio img 10">
+                </div>
+            </div>
+             <!-- Ảnh 11 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                    <img src="images/11.png" class="img-responsive img-thumbnail" alt="portfolio img 11">
+                </div>
+            </div>
+             <!-- Ảnh 12 -->
+            <div class="col-md-4 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s" style="padding: 10px;">
+                <div class="portfolio-thumb">
+                    <img src="images/12.png" class="img-responsive img-thumbnail" alt="portfolio img 12">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    	<!-- end portfolio -->
+
+    	<!-- start contact -->
+    	<section id="lienhe" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364); padding: 80px 0; color: #ffffff; font-family: 'Segoe UI', sans-serif;">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-12">
+        <h2 class="section-title wow fadeInDown" data-wow-delay="0.2s" style="font-size: 36px; font-weight: bold; color: #ffd700; letter-spacing: 1px;">
+          GIỚI THIỆU VỀ CHÚNG TÔI
+        </h2>
+        <p style="color: #dcdcdc; font-size: 17px; margin-top: 10px;">
+          Dịch vụ cứu hộ giao thông 24/7 – Nhanh chóng, An toàn, Chuyên nghiệp.
+        </p>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <!-- Logo/Image -->
+      <div class="col-md-6 text-center wow fadeInLeft" data-wow-delay="0.4s">
+        <img src="images/LOGOPN.png" alt="Logo Cứu Hộ Nguyên Phúc"
+             class="img-fluid" style="max-width: 80%; border-radius: 16px; box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);">
+      </div>
+
+      <!-- Text Content -->
+      <div class="col-md-6 wow fadeInRight" data-wow-delay="0.4s">
+        <div style="padding: 20px;">
+          <h3 style="color: #fcd34d; font-weight: 600;">CÔNG TY TNHH MTV VẬN TẢI NGUYÊN PHÚC</h3>
+          <p style="color: #e2e8f0;">
+            Chúng tôi chuyên cứu hộ giao thông khẩn cấp 24/24 – sẵn sàng hỗ trợ mọi tình huống gặp sự cố xe trên toàn tuyến quốc lộ, cao tốc, nội thành và các khu vực xa xôi.
+          </p>
+          <p style="color: #cbd5e0;">
+            Chỉ cần nhấc máy gọi, đội ngũ cứu hộ chuyên nghiệp của chúng tôi sẽ nhanh chóng có mặt để hỗ trợ bạn với chi phí hợp lý, uy tín hàng đầu.
+          </p>
+
+          <div class="contact-info mt-4">
+            <h5 style="color: #ffd700;"><i class="fas fa-phone-alt me-2"></i>Hotline:</h5>
+            <p style="color: #ffffff; font-size: 16px; line-height: 1.6;">
+              0918.170.333 - 098.901.5151<br>
+              0327.697.535 - 0939.016.464
+            </p>
+
+            <h5 style="color: #ffd700;"><i class="fas fa-map-marker-alt me-2"></i>Địa chỉ:</h5>
+            <p style="color: #ffffff;">
+              Số 008, Tổ 8 Phú Trường, Xã Song Phú, Tam Bình, Vĩnh Long
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-warning mt-3"
+             style="padding: 12px 28px; font-weight: bold; border-radius: 10px; box-shadow: 0 6px 15px rgba(255, 215, 0, 0.3); transition: 0.3s;">
+            LIÊN HỆ NGAY
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Map Section -->
+    <div class="row mt-5 wow fadeInUp" data-wow-delay="0.5s">
+      <div class="col-md-12">
+        <h4 style="color: #ffd700; text-align: center; margin-bottom: 20px;">Vị trí công ty trên bản đồ</h4>
+        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.428107655618!2d105.97653317488323!3d10.133934089902846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a002f30c1f2e13%3A0xe1ae44e98780f87a!2zU29uZyBQaMO6LCBUYW0gQsOsbmgsIFbEqW5oIExvbmc!5e0!3m2!1svi!2s!4v1718532761900!5m2!1svi!2s"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    	<!-- end contact -->
+
+        <!-- start copyright -->
+        <footer id="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end copyright -->
+        <section id="video-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s"><span>VIDEO GIỚI THIỆU DỊCH VỤ</span>  </h2>
+                <div class="video-container-wrapper wow fadeIn" data-wow-delay="0.4s">
+                    <video controls class="my-video" poster="path/to/video-thumbnail.jpg" autoplay muted loop playsinline>
+                        <source src="video/dichvucuuho.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ thẻ video.
+                    </video>
+                    <p class="video-description">Hãy xem video của chúng tôi để hiểu rõ hơn về dịch vụ cứu hộ giao thông và trải nghiệm sự chuyên nghiệp của chúng tôi!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <p>&copy; 2025 Cứu Hộ Giao Thông Phúc Nguyên. All rights reserved.</p>
+    </footer>
+
+        <!-- start scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <!-- end scripts -->
+        
+        <!-- Custom script for the page --> 
+    <script src="path/to/your/script.js"></script>
+            </div>
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>new WOW().init();</script>
+
+	</body>
+</html>

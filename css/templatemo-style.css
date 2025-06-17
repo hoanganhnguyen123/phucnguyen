@@ -168,13 +168,19 @@ header .social-icon li a
 	}
 /* end header */
 
-/* Thanh navbar với nền gradient + shadow mềm */
-.navbar-default {
-    background: linear-gradient(to right, #ffe259, #ffa751); /* gradient vàng cam */
-    border: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    margin: 0 !important;
+/* Thanh navbar với nền gradient hiện đại + shadow mềm */
+.navbar-default::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* lớp phủ mờ đen */
+    z-index: 1;
 }
+.navbar-default {
+    position: relative;
+    z-index: 2;
+}
+
 
 /* Logo thương hiệu */
 .navbar-default .navbar-brand {
